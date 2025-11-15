@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="theme-color" content="#1a73e8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Gewässerproben App">
+    <meta name="description" content="Professionelle Gewässerproben Analyse App">
+    <meta name="keywords" content="Gewässer, Wasser, Analyse, Proben, Umwelt">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="icons/icon-72x72.png">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
+    
+    <title>Gewässerproben App</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+    
+    <style>
+        /* Ihr gesamter CSS Code hier einfügen */
+        :root {
+            --primary-color: #1a73e8;
+            --secondary-color: #34a853;
+            /* ... restlicher CSS Code ... */
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #343a40;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        /* Fügen Sie hier Ihren gesamten CSS Code ein */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌊 Gewässerproben Analyse App</h1>
+        </header>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="entry">➕ Neue Probe</div>
+            <div class="tab" data-tab="list">📋 Liste</div>
+            <div class="tab" data-tab="charts">📊 Diagramm</div>
+            <div class="tab" data-tab="limits">⚠️ Grenzwerte</div>
+            <div class="tab" data-tab="export">📤 Export</div>
+        </div>
+        
+        <!-- Fügen Sie hier Ihren gesamten HTML Code ein -->
+        
+    </div>
+
+    <!-- Service Worker Registration -->
+    <script>
+        // Service Worker für Offline-Funktionalität
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('sw.js')
+                    .then(function(registration) {
+                        console.log('ServiceWorker registration successful');
+                    })
+                    .catch(function(error) {
+                        console.log('ServiceWorker registration failed: ', error);
+                    });
+            });
+        }
+        
+        // Ihr gesamter JavaScript Code hier einfügen
+    </script>
+</body>
+</html>
